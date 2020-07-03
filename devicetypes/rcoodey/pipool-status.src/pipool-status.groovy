@@ -48,6 +48,6 @@ def parse(String description) {
 
 // handle commands
 def statusEvent(eventVal) {
-    sendEvent(name: "temperature", value: eventVal)
+    sendEvent(name: "temperature", value: eventVal, isStateChange: true)
     //log.debug event
 }
