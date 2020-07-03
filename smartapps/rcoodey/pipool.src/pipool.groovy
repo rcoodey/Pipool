@@ -62,13 +62,13 @@ void updatePoolStatus(state, id) {
    def pooldevice = switches.find { it.deviceNetworkId == "Pipool${id}" }
    if (pooldevice) {
        pooldevice.statusEvent(state == "0" ? "off" : "on")
-       log.debug id + " pool status event: " + state
+       //log.debug id + " pool status event: " + state
    }
    else {
        def tempdevice = temperature.find { it.deviceNetworkId == "Pipool${id}" }
        if (tempdevice) {
            tempdevice.statusEvent(state)
-           log.debug id + " pool temp event: " + state
+           //log.debug id + " pool temp event: " + state
        }
    }
 }
