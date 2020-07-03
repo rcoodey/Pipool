@@ -31,7 +31,7 @@ metadata {
 
 // handle commands
 def statusEvent(state) {
-    sendEvent(name: "switch", value: state)
+    sendEvent(name: "switch", value: state, isStateChange: true)
 }
 
 def on() {
